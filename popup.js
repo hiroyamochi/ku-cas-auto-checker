@@ -1,10 +1,7 @@
-// ページが読み込まれた時に実行
-document.addEventListener('DOMContentLoaded', function() {
-  chrome.storage.sync.get('selectedButtonNumber', function(data) {
-    var selectedButtonNumber = data.selectedButtonNumber || '1'; // デフォルト値は1
-    var radioButton = document.querySelector(`input[type="radio"]:nth-of-type(${selectedButtonNumber})`);
-    if (radioButton) {
-      radioButton.checked = true;
-    }
+// 保存ボタンがクリックされた時の処理
+document.getElementById('save').addEventListener('click', function() {
+  var buttonNumber = document.getElementById('buttonNumber').value;
+  chrome.storage.sync.set({selectedButtonNumber: buttonNumber}, function() {
+    console.log('設定が保存されました');
   });
 });
