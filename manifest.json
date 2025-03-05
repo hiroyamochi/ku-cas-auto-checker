@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Radio Button Changer",
-  "version": "1.0",
+  "name": "KU CAS ID Auto Selector",
+  "version": "1.1",
   "permissions": ["storage", "activeTab"],
+  "description": "Auto select ID radio button in Kumamoto University's CAS login page.",
   "action": {
     "default_popup": "popup.html"
   },
@@ -11,5 +12,10 @@
       "matches": ["https://cas.kumamoto-u.ac.jp/cas/*", "https://uportal.kumamoto-u.ac.jp/*"],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "icons": {
+    "16": "icon/icon16.png",
+    "48": "icon/icon48.png",
+    "128": "icon/icon128.png"
+  }
 }
